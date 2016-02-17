@@ -1,6 +1,6 @@
 #include "Block.h"
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include "SDL2/SDL.h"
+#include "SDL2/SDL_image.h"
 
 Block::Block(SDL_Renderer* renderer, int x, int y, int texture,char val)
 {

@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <fstream>
 #include <sstream>
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include "SDL2/SDL.h"
+#include "SDL2/SDL_image.h"
 
 #include "Block.h"
 
@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
     }
     SDL_Quit();
     //system("cls");
-    printf("\nI seriously hope you remembered to save.");
+    //printf("\nI seriously hope you remembered to save.");
     //printf("\nI also seriously hope we finish this shit by the deadline.\n\n");
     //printf("\nThank you for putting the \"dung\" in \"dungeon\"! \n\n\n\n\n");
     printf("\n\n\n\n\n\n\nJUST v0.0.1 - Copyup (c)1984 SOME AMOUNT OF RIGHTS RESERVED, BITCH\n\"Fuck FLOSS, Fuck Liberty, and especially, Fuck You :^)\"\n\n");
