@@ -16,10 +16,28 @@ Block::Block(SDL_Renderer* renderer, int x, int y, int texture,char val)
         this->texture = IMG_LoadTexture(renderer, "TILE.png");
         break;
     case 1:
-        this->texture = IMG_LoadTexture(renderer, "TILE_STAR.png");
+        this->texture = IMG_LoadTexture(renderer, "TILE_ALT.png");
         break;
     case 2:
-        this->texture = IMG_LoadTexture(renderer, "TILE_BONUS.png");
+        this->texture = IMG_LoadTexture(renderer, "TILE_2C.png");
+        break;
+    case 3:
+        this->texture = IMG_LoadTexture(renderer, "TILE_2W.png");
+        break;
+    case 4:
+        this->texture = IMG_LoadTexture(renderer, "TILE_3W.png");
+        break;
+    case 5:
+        this->texture = IMG_LoadTexture(renderer, "TILE_3C.png");
+        break;
+    case 6:
+        this->texture = IMG_LoadTexture(renderer, "TILE_STAR.png");
+        break;
+    case 7:
+        this->texture = IMG_LoadTexture(renderer, "TILE_LETTER.png");
+        break;
+    case 8:
+        this->texture = IMG_LoadTexture(renderer, "TILE_WORD.png");
         break;
     }
 
@@ -49,41 +67,35 @@ void Block::change_type(int tipo)
     SDL_DestroyTexture(this->texture);
     this->tipo = tipo;
 
-    /*switch(this->tipo)
+    switch(this->tipo)
     {
     case 0:
-        this->texture = IMG_LoadTexture(renderer, "BWALL1.png");
+        this->texture = IMG_LoadTexture(renderer, "TILE.png");
         break;
     case 1:
-        this->texture = IMG_LoadTexture(renderer, "MWALL1.png");
+        this->texture = IMG_LoadTexture(renderer, "TILE_ALT.png");
         break;
     case 2:
-        this->texture = IMG_LoadTexture(renderer, "FLOOR.png");
+        this->texture = IMG_LoadTexture(renderer, "TILE_2C.png");
         break;
     case 3:
-        this->texture = IMG_LoadTexture(renderer,"VDOOR.png");
+        this->texture = IMG_LoadTexture(renderer, "TILE_2W.png");
         break;
     case 4:
-        this->texture = IMG_LoadTexture(renderer,"HDOOR.png");
+        this->texture = IMG_LoadTexture(renderer, "TILE_3W.png");
         break;
     case 5:
-        this->texture = IMG_LoadTexture(renderer,"PSTART.png");
+        this->texture = IMG_LoadTexture(renderer, "TILE_3C.png");
         break;
     case 6:
-        this->texture = IMG_LoadTexture(renderer,"GUARD.png");
+        this->texture = IMG_LoadTexture(renderer, "TILE_STAR.png");
         break;
     case 7:
-        this->texture = IMG_LoadTexture(renderer,"EDOOR.png");
+        this->texture = IMG_LoadTexture(renderer, "TILE_LETTER.png");
         break;
     case 8:
-        this->texture = IMG_LoadTexture(renderer,"EXIT.png");
+        this->texture = IMG_LoadTexture(renderer, "TILE_WORD.png");
         break;
-    case 9:
-        this->texture = IMG_LoadTexture(renderer,"SS.png");
-        break;
-    case -1:
-        this->texture = IMG_LoadTexture(renderer, "EMPTY.png");
     }
-    */
     SDL_QueryTexture(this->texture,NULL,NULL,&rect_block.w,&rect_block.h);
 }
